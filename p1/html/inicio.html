@@ -2,6 +2,9 @@
 <html lang="es-ES">
 <head>
     <meta charset="UTF-8"/>
+
+    <!--icono de la web-->
+    <link rel="icon" href="../img/book-icon.png" type="imgs">
     <title>Librería Orwell</title>
 </head>
 
@@ -12,7 +15,7 @@
         <h4>Venta de libros especializada en Psicología y Filosofía</h4>
     </header>
     
-    <nav>
+    <nav class="barra-navegacion">
         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#catalogo">Catálogo</a></li>
@@ -22,69 +25,85 @@
         </ul> 
     </nav>
 
-    <aside id="top-lateral">
-        <h4>Más Vendidos</h4>
-        <ul>
-            <li class="top-libro">Arquetipos e inconsciente colectivo</li>
-            <li class="top-libro">Archipiélago Gulag I (Tiempo de Memoria)</li>
-            <li class="top-libro">Así habló Zaratustra</li>
-        </ul>
-
-        <h4>Autores Más Populares</h4>
-        <ul>
-            <li class="top-autor">Carl Jung</li>
-            <li class="top-autor">Alexandr Solzhenitsyn</li>
-            <li class="top-autor">Friedrich Nietzsche</li>
-        </ul>
-    </aside>
-
     <main>
-        <h2>Presentación del libro "Filosofía ciudadana"</h2>
-        <p>Lugar: Librería Orwell, Granada</p>
-        <h3>Ponentes:</h3>
-        <ul>
-            <li>José Manuel Sánchez Ron, físico y académico de la Real Academia Española</li>
-            <li>Eulalia Pérez Sedeño, filósofa e investigadora del IFS-CSIC</li>
-            <li>Miguel Angel Quintanilla, autor del libro</li>
-        </ul>
+        <section class="presentacion-libro">
+            <h2>Presentación del libro "Filosofía ciudadana"</h2>
+            <p>Lugar: Librería Orwell, Granada</p>
+            <h3>Ponentes:</h3>
+            <ul>
+                <li><span class="nombre-ponente">José Manuel Sánchez Ron</span>, físico y académico de la Real Academia Española</li>
+                <li><span class="nombre-ponente">Eulalia Pérez Sedeño</span>, filósofa e investigadora del IFS-CSIC</li>
+                <li><span class="nombre-ponente">Miguel Angel Quintanilla</span>, autor del libro</li>
+            </ul>
+        </section>
 
-        <h2>Presentación del libro "Crítica de la razón precaria"</h2>
-        <p>Lugar: Librería Orwell, Almería</p>
-        <h3>Ponente:</h3>
-        <ul>
-            <li>Javier López Alós</li>
-        </ul>
+        <section class="presentacion-libro">
+            <h2>Presentación del libro "Crítica de la razón precaria"</h2>
+            <p>Lugar: Librería Orwell, Almería</p>
+            <h3>Ponente:</h3>
+            <ul>
+                <li><span class="nombre-ponente">Javier López Alós</span></li>
+            </ul>
+        </section>
 
-        <h2>Presentación del libro "El origen del hombre y la selección en relación al sexo"</h2>
-        <p>Lugar: Librería Orwell, Almería</p>
-        <h3>Ponente:</h3>
-        <ul>
-            <li>Juan Moreno Klemming (MNCN-CSIC)</li>
-            <li>Ignacio de la Torre (IH-CSIC)</li>
-            <li>Francisco Pelayo (IH-CSIC)</li>
-            <li>Miguel Ángel Puig-Samper (IH-CSIC)</li>
-        </ul>
+        <section class="presentacion-libro">
+            <h2>Presentación del libro "El origen del hombre y la selección en relación al sexo"</h2>
+            <p>Lugar: Librería Orwell, Almería</p>
+            <h3>Ponente:</h3>
+            <ul>
+                <li><span class="nombre-ponente">Juan Moreno Klemming</span> (MNCN-CSIC)</li>
+                <li><span class="nombre-ponente">Ignacio de la Torre</span> (IH-CSIC)</li>
+                <li><span class="nombre-ponente">Francisco Pelayo</span> (IH-CSIC)</li>
+                <li><span class="nombre-ponente">Miguel Ángel Puig-Samper</span> (IH-CSIC)</li>
+            </ul>
+        </section>
     </main>
 
+    <aside id="top-lateral">
+        <section class="top-libros">
+            <h4>Más Vendidos</h4>
+            <ul>
+                <li class="top-libro">Arquetipos e inconsciente colectivo</li>
+                <li class="top-libro">Archipiélago Gulag I (Tiempo de Memoria)</li>
+                <li class="top-libro">Así habló Zaratustra</li>
+            </ul>
+        </section>
+
+        <section class="top-autores">
+            <h4>Autores Más Populares</h4>
+            <ul>
+                <li class="top-autor">Carl Jung</li>
+                <li class="top-autor">Alexandr Solzhenitsyn</li>
+                <li class="top-autor">Friedrich Nietzsche</li>
+            </ul>
+        </section>
+    </aside>
+
     <footer>
-        <h2>Granada</h2>
-        <p class="calle-tlf">Calle Compositor Riviera 32 <span class="tlf">(158466312)</span></p>
-        
-        <h2>Almería</h2>
-        <p class="calle-tlf">Calle Fuentenueva 5 <span class="tlf">(555234176)</span></p>
-        
-        <img id="logo-correo" src='../img/email.png' alt="icono-correo" width="2%">
-        <p id="direccion-correo">libreriaorwell@gmail.com</p>
+        <div id="Localizacion">
+            <p class="ciudad">Granada</p>
+            <p class="calle-tlf">Calle Compositor Riviera 32 <span class="tlf">(158466312)</span></p>
+            
+            <p class="ciudad">Almería</p>
+            <p class="calle-tlf">Calle Fuentenueva 5 <span class="tlf">(555234176)</span></p>
+        </div>
 
-        <img id="logo-fb" src='../img/facebook-logo.png' alt="icono-facebook" width="2%">
-        <img id="logo-twitter" src='../img/twitter-logo.png' alt="icono-twitter" width="2%">
-        <img id="logo-yt" src='../img/youtube-logo.png' alt="icono-youtube" width="2%">
+        <div id="social-media">
+            <img id="logo-correo" src='../img/email.png' alt="icono-correo" width="2%">
+            <p id="direccion-correo">libreriaorwell@gmail.com</p>
 
-        <ul>
-            <li><a href="#tarifas">Tarifas</a></li>
-            <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
-            <li><a href="#mapa-sitio">Mapa del sitio</a></li>
-            <li><a href="#ayuda">Ayuda</a></li>
-        </ul>
+            <img id="logo-fb" src='../img/facebook-logo.png' alt="icono-facebook" width="2%">
+            <img id="logo-twitter" src='../img/twitter-logo.png' alt="icono-twitter" width="2%">
+            <img id="logo-yt" src='../img/youtube-logo.png' alt="icono-youtube" width="2%">
+        </div>
+
+        <div id="enlaces">
+            <ul>
+                <li><a href="#tarifas">Tarifas</a></li>
+                <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+                <li><a href="#mapa-sitio">Mapa del sitio</a></li>
+                <li><a href="#ayuda">Ayuda</a></li>
+            </ul>
+        </div>
     </footer>
 </body>
