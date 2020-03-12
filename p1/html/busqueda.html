@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8"/>
+
+    <!--icono de la web-->
+    <link rel="icon" href="../img/book-icon.png" type="imgs">
+    <title>Librería Orwell</title>
+</head>
+
+<body>
+    <header>
+        <img id="fotografia" src='../img/book-icon.png' alt='foto-receta' width="5%">
+        <h1>Librería Orwell</h1>
+        <h4>Venta de libros especializada en Psicología y Filosofía</h4>
+    </header>
+    
+    <nav class="barra-navegacion">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#busqueda">Búsqueda</a></li>
+            <li><a href="#tiendas">Tiendas</a></li>
+            <li><a href="#pedidos">Pedidos</a></li>
+        </ul> 
+    </nav>
+
+    <main id="principal-inicio">
+        <form class="formulario">
+            <div class=grupo-formulario>
+                <label>Autor </label>
+                <input type="text" name="autor">
+            </div>
+
+            <div class=grupo-formulario>
+                <label>Titulo </label>
+                <input type="text" name="titulo">
+            </div>
+
+            <div class=grupo-formulario>
+                <label>ISBN </label>
+                <input type="text" name="isbn">
+            </div>
+
+            <div class=grupo-formulario>
+                <label>precio entre </label>
+                <input type="text" name="min-precio">
+                <label> y </label>
+                <input type="text" name="max-precio">
+            </div>
+
+            <div class=grupo-formulario>            
+                <label>Género</label>
+                <select id="opciones-genero" name="genero">
+                    <option value="pre-sel" selected>- elija un género -</option>
+                    <option value="psicologia">Psicología</option>
+                    <option value="filosofia">Filosofía</option>
+                    <option value="sociologia">Sociología</option>
+                    <option value="pedagogia">Pedagogía</option>
+                </select> 
+            </div>
+
+            <div class=grupo-formulario>            
+                <label>Encuadernación</label>
+                <input type="radio" name="encuadernacion" value="dura" /> Tapa dura
+                <input type="radio" name="encuadernacion" value="blanda" /> Tapa blanda
+                <input type="radio" name="encuadernacion" value="cualquiera" /> cualquiera
+            </div>
+    
+            <input class="boton" type="submit" value="Buscar" name="">
+        </form>    
+    </main>
+
+    <aside id="top-lateral">
+        <section class="top-libros">
+            <h4>Más Vendidos</h4>
+            <ul>
+                <li class="top-libro">Arquetipos e inconsciente colectivo</li>
+                <li class="top-libro">Archipiélago Gulag I (Tiempo de Memoria)</li>
+                <li class="top-libro">Así habló Zaratustra</li>
+            </ul>
+        </section>
+
+        <section class="top-autores">
+            <h4>Autores Más Populares</h4>
+            <ul>
+                <li class="top-autor">Carl Jung</li>
+                <li class="top-autor">Alexandr Solzhenitsyn</li>
+                <li class="top-autor">Friedrich Nietzsche</li>
+            </ul>
+        </section>
+    </aside>
+
+    <footer>
+        <div id="Localizacion">
+            <p class="ciudad">Granada</p>
+            <p class="calle-tlf">Calle Compositor Riviera 32 <span class="tlf">(158466312)</span></p>
+            
+            <p class="ciudad">Almería</p>
+            <p class="calle-tlf">Calle Fuentenueva 5 <span class="tlf">(555234176)</span></p>
+        </div>
+
+        <div id="social-media">
+            <img id="logo-correo" src='../img/email.png' alt="icono-correo" width="2%">
+            <p id="direccion-correo">libreriaorwell@gmail.com</p>
+
+            <img id="logo-fb" src='../img/facebook-logo.png' alt="icono-facebook" width="2%">
+            <img id="logo-twitter" src='../img/twitter-logo.png' alt="icono-twitter" width="2%">
+            <img id="logo-yt" src='../img/youtube-logo.png' alt="icono-youtube" width="2%">
+        </div>
+
+        <div id="enlaces">
+            <ul>
+                <li><a href="#tarifas">Tarifas</a></li>
+                <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+                <li><a href="#mapa-sitio">Mapa del sitio</a></li>
+                <li><a href="#ayuda">Ayuda</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
