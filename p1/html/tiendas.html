@@ -5,7 +5,7 @@
 
     <!--icono de la web-->
     <link rel="icon" href="../img/book-icon.png" type="imgs">
-    <title>Búsqueda - Librería Orwell</title>
+    <title>Librería Orwell</title>
 </head>
 
 <body>
@@ -25,50 +25,39 @@
         </ul> 
     </nav>
 
+    <!-- foto fachada -->
+    <!-- dirección postal -->
+    <!-- telefono -->
+    <!-- horario -->
+
     <main id="principal-inicio">
-        <form class="formulario"  action="/p1/procesar.php">
-            <div class=grupo-formulario>
-                <label>Autor </label>
-                <input type="text" name="autor">
-            </div>
+        <table>
+            <tr>
+                <th>Librería</th>
+                <th>Fachada</th>
+                <th>Dirección Postal</th>
+                <th>Telefono</th>
+            </tr>
+            <tr>
+              <th>Orwell Granada Norte</th>
+              <td><img id="fotografia" src='../img/fachada1.jpg' alt='foto-receta' width="50%"></td>
+              <td>18220</td>
+              <td>858466312</td>
 
-            <div class=grupo-formulario>
-                <label>Titulo </label>
-                <input type="text" name="titulo">
-            </div>
-
-            <div class=grupo-formulario>
-                <label>ISBN </label>
-                <input type="text" name="isbn">
-            </div>
-
-            <div class=grupo-formulario>
-                <label>precio entre </label>
-                <input type="text" name="min-precio">
-                <label> y </label>
-                <input type="text" name="max-precio">
-            </div>
-
-            <div class=grupo-formulario>            
-                <label>Género</label>
-                <select id="opciones-genero" name="genero">
-                    <option value="pre-sel" selected>- elija un género -</option>
-                    <option value="psicologia">Psicología</option>
-                    <option value="filosofia">Filosofía</option>
-                    <option value="sociologia">Sociología</option>
-                    <option value="pedagogia">Pedagogía</option>
-                </select> 
-            </div>
-
-            <div class=grupo-formulario>            
-                <label>Encuadernación</label>
-                <input type="radio" name="encuadernacion" value="dura" /> Tapa dura
-                <input type="radio" name="encuadernacion" value="blanda" /> Tapa blanda
-                <input type="radio" name="encuadernacion" value="cualquiera" /> cualquiera
-            </div>
-    
-            <input class="boton" type="submit" value="Buscar" name="">
-        </form>    
+            </tr>
+            <tr>
+              <th>Orwell Granada Sur</th>
+              <td><img id="fotografia" src='../img/fachada2.jpg' alt='foto-receta' width="50%"></td>
+              <td>18014</td>
+              <td>758476332</td>
+            </tr>
+            <tr>
+              <th>Orwell Almería Centro</th> 
+              <td><img id="fotografia" src='../img/fachada3.jpg' alt='foto-receta' width="50%"></td>
+              <td>15671</td>
+              <td>858665522</td>
+            </tr>
+          </table> 
     </main>
 
     <aside id="top-lateral">
