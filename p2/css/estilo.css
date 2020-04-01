@@ -1,0 +1,98 @@
+/***********************************************************************/
+/*                          ATRIBUTOS GENERALES                        */
+
+/*Borramos los margenes predeterminados de los navegadores web*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* define cómo se calcula el ancho y alto de cada elemento */
+}
+  
+h1 {
+    font-size: 40px;
+    padding: 2px;
+}
+  
+/*Estilo del body por defecto*/
+body {
+    color: #222;
+    background-color: rgb(245, 245, 245);
+    transition: 0.5s;
+}  
+/***********************************************************************/
+  
+/***********************************************************************/
+/*                                CABECERA                             */
+/*Estilo de la cabecera de la pagina web*/
+header  {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #cbdb4c;
+    padding: 25px;
+}
+  
+.titulo-barra {
+    padding: 40px;
+}
+  
+.logo{
+    position: relative;
+    float:left;
+    padding:5px;
+    margin-right: 24px;
+    width: 10%;
+}
+/***********************************************************************/
+
+/***********************************************************************/
+/*                                MENÚ                                 */
+/*Estilo de la barra de navegacion / Menu*/
+nav {
+    list-style-type: none;   /*Borra los puntos de la lista*/
+    overflow: hidden;
+    background-color: #e8f2a1;
+  }
+  
+nav a{
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;  /*Quita el subrayado*/
+    color:black;
+    font-weight: bold;
+}
+  
+/*Cuando pasa el raton por alguna seccion del la barra de navegacion
+cambia el color de fondo y el color de la fuente*/
+nav a:hover {
+    background-color: #d4ea6b;
+    color: #222;
+}
+/***********************************************************************/
+
+/***********************************************************************/
+/*                            PIE DE PÁGINA                            */
+/*Estilo del pie de pagina*/
+footer {
+    padding: 20px;
+    background-color: #b5c445;
+    color: black;
+    text-align: center;
+}
+  
+footer p{
+    font-size: 14px;
+    padding: 1px;
+}
+/***********************************************************************/
+
+#descripcion {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #e8f2a1;
+}
+
+.foto-receta{
+    flex: 79%;
+    width: 30%;
+}
