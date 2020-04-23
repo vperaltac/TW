@@ -1,0 +1,342 @@
+/***********************************************************************/
+/*                          ATRIBUTOS GENERALES                        */
+
+/*Borramos los margenes predeterminados de los navegadores web*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* define cómo se calcula el ancho y alto de cada elemento */
+}
+  
+h1 {
+    font-size: 40px;
+    padding: 2px;
+}
+  
+/*Estilo del body por defecto*/
+body {
+    transition: 0.5s;
+}  
+
+
+/***********************************************************************/
+
+/***********************************************************************/
+/*                          TEMA DE LA WEB                            */
+
+.cabecera, .cabecera-receta, nav a:hover, .paginas{
+    background-color: #d7e280;
+    color: #222;
+}
+
+
+nav,footer, #descripcion{
+    background-color: rgb(245, 240, 168);
+}
+
+nav a{
+    color:black;
+}
+
+.cabecera-aside{
+    background-color: #f5c05e;
+}
+
+.barra-lateral{
+    background-color: white;
+}
+
+.campo-lateral{
+    background-color: #ffecaf;
+}
+
+.boton {
+    background-color: #c2bebe;
+}
+
+.informacion{
+    background-color: #feffd4;
+}
+
+.info-ingredientes{
+    background-color: rgb(223, 223, 255);
+}
+
+.comentario{
+    background-color: rgb(255, 219, 219);
+}
+
+.comentario-fecha, .comentario-usuario{
+    color: rgb(139, 63, 120);
+}
+/***********************************************************************/
+
+
+
+/***********************************************************************/
+  
+/***********************************************************************/
+/*                                CABECERA                             */
+/*Estilo de la cabecera de la pagina web*/
+.cabecera  {
+    padding: 25px;
+    text-align: center;
+    overflow: auto;
+}
+  
+.titulo-barra {
+    padding: 40px;
+    text-align: center;
+}
+  
+.logo{
+    float:left;
+    padding:5px;
+    margin-right: 24px;
+    width: 100px;
+    height: 100px;
+}
+/***********************************************************************/
+
+/***********************************************************************/
+/*                                MENÚ                                 */
+/*Estilo de la barra de navegacion / Menu*/
+nav {
+    list-style-type: none;   /*Borra los puntos de la lista*/
+    overflow: hidden;
+    margin:8px;
+}
+  
+nav a{
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;  /*Quita el subrayado*/
+    font-weight: bold;
+}
+  
+
+/***********************************************************************/
+
+/***********************************************************************/
+/*                            BARRA LATERAL                           */
+
+/*Estilo de la columna izquierda (informacion adicional)*/
+.barra-lateral {
+    flex: 19%;
+    margin-left:10px;
+}
+
+.cabecera-aside{
+    padding: 3px;
+}
+
+.cabecera-aside h2{
+    margin-left: 10px;
+}
+
+.barra-lateral li{
+    font-size: 18px;
+    margin: 15px;
+}
+
+.campo-lateral{
+    padding:8px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(120, 194, 0);
+}
+
+/*La barra lateral se oculta con resoluciones por debajo de 800px */
+@media (max-width: 800px) {
+    .barra-lateral {
+        display: none;
+    }
+}
+
+
+#login .grupo-formulario{
+    padding:2px;
+}
+
+#login label{
+    display: inline-block;
+    margin-left: 5px;
+    width: 60px;
+    text-align: right;
+}
+
+#login input[type="text"],
+#login input[type="password"]{
+    margin:2px;
+    padding:6px;
+    width: 60%;
+}
+
+#login .boton {
+    border: none;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#login .clr{
+    clear: both;
+}
+  
+/***********************************************************************/
+
+/***********************************************************************/
+/*                           BLOQUE PRINCIPAL                          */
+/*Estilo del contenido principal de un evento*/
+#bloque-principal {
+    display: flex;
+    flex-wrap: nowrap;
+    margin:8px;
+}
+
+#bloque-principal p {
+    font-size: 18px;
+    padding: 1px;
+    line-height: 160%;
+}
+
+.cabecera-receta  {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.cabecera-receta h1{
+    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.puntuacion{
+    max-width:150px;
+    max-height:50px;
+    width: auto;
+    height: auto;
+}
+
+.tags-autor{
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+#descripcion {
+    overflow: hidden;
+}
+  
+.descripcion-texto{
+    margin:12px;
+}
+
+.foto-receta{
+    float: right;
+    padding: 12px;
+    max-width:380px;
+    max-height:273px;
+    width: auto;
+    height: auto;
+}
+  
+.informacion h2 {
+    font-size: 35px;
+    padding: 2px;
+}
+
+.info-ingredientes{
+    float:right;
+    padding: 5px;
+    margin: 20px;
+}
+
+.info-ingredientes ul{
+    list-style-type: none;
+}
+
+ol{
+    list-style-position: inside;
+}
+
+p.organizador {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 2px;
+}
+  
+p.fecha{
+    padding: 2px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+  
+.informacion {
+    flex: 79%;
+    padding: 10px;
+    border: 1px solid rgb(120, 194, 0);
+}
+
+.galeria {
+    margin:30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.galeria-imagen img{
+    width: 100%;
+}
+
+/*----------------------------------------------------------------------*/
+/*                             comentarios                             */
+.comentario{
+    margin-bottom: 6px;
+}
+
+.comentario-fecha, .comentario-usuario{
+    display: inline-block;
+}
+
+.comentario-fecha, .comentario-usuario, .comentario-texto{
+    margin-left: 6px;
+}
+/*----------------------------------------------------------------------*/
+
+.paginas{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.numero-pagina{
+    margin: 5px;
+    width: 4%;
+}
+
+/***********************************************************************/
+    
+
+
+/***********************************************************************/
+/*                            PIE DE PÁGINA                            */
+/*Estilo del pie de pagina*/
+footer {
+    padding: 10px;
+    text-align: center;
+}
+  
+footer p{
+    font-size: 14px;
+    padding: 1px;
+}
+/***********************************************************************/
