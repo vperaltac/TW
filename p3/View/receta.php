@@ -1,31 +1,12 @@
-<!DOCTYPE html>
-<html lang="es-ES">
-<head>
-    <meta charset="UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="css/estilo.css">
-    <link rel="icon" href="img/burger-top.png" type="imgs">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi página de recetas</title>
-</head>
+<?php
 
-<body>
-    <header class="cabecera">
-        <img class="logo" src='img/burger-top.png' alt='logo'>
-        <h1>Comida sana para todos los días</h1>
-    </header>
-    
-    <nav>
-        <a href="#">Listado de recetas</a>
-        <a href="#">Añadir nueva receta</a>
-        <a href="#">Ver mis recetas</a>
-    </nav>
-
-
+function HTMLreceta(){
+echo <<< HTML
     <main id="bloque-principal">
         <section class="informacion">
             <div class="cabecera-receta">
                 <h1>Fish & Chips</h1>
-                <img class="puntuacion" src='img/puntuacion.png' alt='puntuacion'>
+                <img class="puntuacion" src='View/img/puntuacion.png' alt='puntuacion'>
             </div>
 
 
@@ -35,7 +16,7 @@
             </div>
 
             <section id="descripcion">
-                <img class="foto-receta" src='img/receta.jpg' alt='foto-receta'>
+                <img class="foto-receta" src='View/img/receta.jpg' alt='foto-receta'>
 
                 <p class="descripcion-texto">Que se haya terminado la Navidad y que nos hayamos hecho el propósito de comer más sano y demás tampoco significa que hayan llegado Los Juegos del Hambre y si el chef Jamie Oliver, que siempre nos da consejos para comer mejor y más sano, nos propone en su web una auténtica receta británica para preparar Fish and Chips, nosotros encantados de prepararla y compartirla con todos vosotros.
                 Es uno de los rebozados que mejor resultado dan para freír pescados blancos, porque quedan crujientes por fuera, jugosos por dentro y apenas absorben aceite. Lo habitual es acompañarlos con una crema de guisantes con menta, pero también valen unos guisantes cocidos con nuestra salsa favorita como puede ser una holandesa.</p>
@@ -81,14 +62,14 @@
             </ol>
 
             <div class="galeria">
-                <div class="galeria-imagen"><img src="img/min1.png"></div>
-                <div class="galeria-imagen"><img src="img/min2.png"></div>
-                <div class="galeria-imagen"><img src="img/min3.png"></div>
-                <div class="galeria-imagen"><img src="img/min4.png"></div>
-                <div class="galeria-imagen"><img src="img/min5.png"></div>
-                <div class="galeria-imagen"><img src="img/min6.png"></div>
-                <div class="galeria-imagen"><img src="img/min7.png"></div>
-                <div class="galeria-imagen"><img src="img/min8.png"></div>
+                <div class="galeria-imagen"><img src="View/img/min1.png"></div>
+                <div class="galeria-imagen"><img src="View/img/min2.png"></div>
+                <div class="galeria-imagen"><img src="View/img/min3.png"></div>
+                <div class="galeria-imagen"><img src="View/img/min4.png"></div>
+                <div class="galeria-imagen"><img src="View/img/min5.png"></div>
+                <div class="galeria-imagen"><img src="View/img/min6.png"></div>
+                <div class="galeria-imagen"><img src="View/img/min7.png"></div>
+                <div class="galeria-imagen"><img src="View/img/min8.png"></div>
             </div>
 
             <section class="comentarios">
@@ -106,64 +87,15 @@
             </section>
 
             <section class="paginas">
-                <img class="numero-pagina" src="img/one.png">
-                <img class="numero-pagina"  src="img/two.png">
-                <img class="numero-pagina" src="img/three.png">
-                <img class="numero-pagina" src="img/four.png">
-                <img class="numero-pagina" src="img/five.png">
-                <img class="numero-pagina" src="img/close.png">
-                <img class="numero-pagina" src="img/edit.png">
-                <img class="numero-pagina" src="img/mail.png">
+                <img class="numero-pagina" src="View/img/one.png">
+                <img class="numero-pagina"  src="View/img/two.png">
+                <img class="numero-pagina" src="View/img/three.png">
+                <img class="numero-pagina" src="View/img/four.png">
+                <img class="numero-pagina" src="View/img/five.png">
+                <img class="numero-pagina" src="View/img/close.png">
+                <img class="numero-pagina" src="View/img/edit.png">
+                <img class="numero-pagina" src="View/img/mail.png">
             </section>
         </section>
-
-        <aside class="barra-lateral">
-            <section class="campo-lateral">
-                <form id="login">
-                    <div class=cabecera-aside>
-                        <h2>Login</h2>
-                    </div> 
-
-                    <div class="grupo-formulario">
-                        <label for="uname"><p>Usuario</p></label>
-                        <input type="text" name="uname" id="email-inicio" required>
-                    </div>
-
-                    <div class="clr"></div>
-                    
-                    <div class="grupo-formulario">
-                        <label for="psw"><p>Clave</p></label>
-                        <input type="password" name="psw" id="pwd-inicio" required>
-                    </div>
-
-                
-                    <input class="boton" type="submit" value="Login" name="" id="boton-inicio">
-                </form>
-            </section>
-
-            <section id="mas-valoradas" class="campo-lateral">
-                <div class=cabecera-aside>
-                    <h2>+ valoradas</h2>
-                </div>
-
-                <ol>
-                    <li>Risotto de calabaza y champiñones</li>
-                    <li>Pollo al salmorejo</li>
-                    <li>Ensalada de espinacas y mango</li>
-                </ol>
-            </section>
-
-            <section id="n-recetas" class="campo-lateral">
-                <div class=cabecera-aside>
-                    <h2>nº recetas</h2>
-                </div>
-
-                <p>el sitio contiene 1452 recetas diferentes</p>
-            </section>
-        </aside>
-    </main>
-
-    <footer>
-        <p>&copy; <a>Tecnologías Web</a> | <a>Mapa del sitio</a> | <a>contacto</a></p>
-    </footer>
-</body>
+HTML;
+}

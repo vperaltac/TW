@@ -3,7 +3,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require_once 'View/web.php';
+require_once 'View/comunes.php';
+require_once 'View/receta.php';
 
 // Recibe la URI de htaccess en formato "limpio"
 $uri = $_SERVER['REQUEST_URI'];
@@ -22,7 +23,11 @@ else{
 switch($_SERVER['REQUEST_METHOD']){
     //------------------------------------  GET  ------------------------------------------
     case 'GET':
-        HTMLinicio(1);
+        HTMLinicio("Mi página de recetas");
+        HTMLcabecera("Mi página de recetas");
+        HTMLnav();
+        HTMLreceta();
+        HTMLsidebar();
         HTMLfooter();
         HTMLfin();
     break;
