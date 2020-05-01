@@ -24,22 +24,26 @@ echo <<< HTML
 HTML;
 }
 
-function HTMLnav(){
+function HTMLnav($conectado){
+    $add_receta = "";
+    if($conectado == 1)
+        $add_receta = "<a href='#'>Añadir nueva receta</a>";
+
 echo <<< HTML
     <nav>
+        <a href="index.php">Inicio</a>
+        $add_receta
         <a href="#">Listado de recetas</a>
-        <a href="#">Añadir nueva receta</a>
-        <a href="#">Ver mis recetas</a>
+        <a href="#">Contacto</a>
     </nav>
 HTML;
 }
 
 
-function HTMLsidebar(){
-echo <<< HTML
-    <aside class="barra-lateral">
-    <section class="campo-lateral">
-        <form id="login">
+function HTMLsidebar($conectado){
+    $widget_login = <<< HTML
+        <section class="campo-lateral">
+        <form action="index.php" id="login" method="post">
             <div class=cabecera-aside>
                 <h2>Login</h2>
             </div> 
@@ -60,6 +64,27 @@ echo <<< HTML
             <input class="boton" type="submit" value="Login" name="" id="boton-inicio">
         </form>
     </section>
+HTML;
+
+    if($conectado){
+        $widget_login = <<< HTML
+            <section class="campo-lateral">
+                    <div class=cabecera-aside>
+                        <h2>Usuario conectado</h2>
+                    </div> 
+
+                    <form action="index.php" method="post">
+                        <input class="btn-eliminar" type="submit" name="logout" value="Desconectar" />
+                    </form>
+            </section>
+HTML;
+    }
+
+
+echo <<< HTML
+    <aside class="barra-lateral">
+
+    $widget_login
 
     <section id="mas-valoradas" class="campo-lateral">
         <div class=cabecera-aside>

@@ -58,6 +58,10 @@ nav a{
     background-color: #feffd4;
 }
 
+.recetas-favs{
+    background-color: #feffd4;
+}
+
 .info-ingredientes{
     background-color: rgb(223, 223, 255);
 }
@@ -146,6 +150,19 @@ nav a{
     border: 1px solid rgb(120, 194, 0);
 }
 
+.btn-eliminar {
+    background-color: #ff1a1a;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+
 /*La barra lateral se oculta con resoluciones por debajo de 800px */
 @media (max-width: 800px) {
     .barra-lateral {
@@ -201,6 +218,12 @@ nav a{
     font-size: 18px;
     padding: 1px;
     line-height: 160%;
+}
+
+.wrap{
+    display:flex;
+    flex-direction: column;
+
 }
 
 .cabecera-receta  {
@@ -282,6 +305,8 @@ p.fecha{
 }
   
 .informacion {
+    overflow-wrap: break-word;
+
     flex: 79%;
     padding: 10px;
     border: 1px solid rgb(120, 194, 0);
@@ -297,6 +322,73 @@ p.fecha{
 .galeria-imagen img{
     width: 100%;
 }
+
+
+#info-principal {
+    background: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("../img/bg4.jpeg");
+    background-size: cover;
+    text-align: center;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 3rem;
+    white-space: nowrap;
+}
+
+/***********************************************************************/
+/*                           PRINCIPAL FAVS                       */
+.recetas-favs{
+    padding: 1%;
+}
+
+.polaroid{
+    margin-top: 1%;
+}
+
+
+/***********************************************************************/
+/*                           IMAGENES PRINCIPAL                       */
+/*Estilo de cada foto con el nombre de su evento*/
+.polaroid {
+    float: left;
+    width: 22%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .polaroid:hover {
+    background-color: rgb(240, 240, 240);
+  }
+  
+  .texto-polaroid {
+    text-align: center;
+    padding: 10px 20px;
+  }
+  
+  .polaroid img {
+    width: 100%;
+  }
+  
+  .polaroid a {
+    text-decoration: none;
+    color: #222;
+  }
+  
+  .polaroid p {
+    font-size: 1.4vw;
+  }
+  
 
 /*----------------------------------------------------------------------*/
 /*                             comentarios                             */
