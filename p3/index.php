@@ -6,7 +6,9 @@ error_reporting(E_ALL);
 require_once 'View/comunes.php';
 require_once 'View/receta.php';
 require_once 'View/principal.php';
+require_once 'View/contacto.php';
 require_once 'Controller/usuario.php';
+require_once 'Controller/contacto.php';
 $titulo = "Mi página de recetas";
 
 switch($_SERVER['REQUEST_METHOD']){
@@ -19,6 +21,17 @@ switch($_SERVER['REQUEST_METHOD']){
             HTMLcabecera($titulo);
             HTMLnav($admin);
             HTMLreceta();
+            HTMLsidebar($admin);
+            HTMLfooter();
+            HTMLfin();        
+        }
+        else if(isset($_GET['contacto'])){
+            $admin = sesionIniciada();
+
+            HTMLinicio($titulo);
+            HTMLcabecera($titulo);
+            HTMLnav($admin);
+            HTMLcontacto();
             HTMLsidebar($admin);
             HTMLfooter();
             HTMLfin();        
@@ -50,6 +63,9 @@ switch($_SERVER['REQUEST_METHOD']){
             HTMLsidebar(0);
             HTMLfooter();
             HTMLfin();            
+        }
+        else if(isset($_POST['mensaje'])){
+            $valido = validarContacto($_POST);
         }
         else{
             $admin = iniciarSesion($_POST['uname'],$_POST['psw']);

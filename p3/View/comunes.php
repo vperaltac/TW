@@ -34,7 +34,7 @@ echo <<< HTML
         <a href="index.php">Inicio</a>
         $add_receta
         <a href="#">Listado de recetas</a>
-        <a href="#">Contacto</a>
+        <a href="index.php?contacto=1">Contacto</a>
     </nav>
 HTML;
 }

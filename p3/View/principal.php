@@ -19,7 +19,7 @@ function HTMLprincipal(){
 
         <section class="recetas-favs">
         <div class="cabecera-receta">
-                <h1>Recetas favoritas</h1>
+                <h1>Recetas populares</h1>
             </div>
 
           <div class="polaroid">
