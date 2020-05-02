@@ -1,35 +1,21 @@
 <?php
 function validarContacto($post){
-    $valido = true;
-    print_r($post);
+    $errores = (array) null;
 
     if($post['nombre'] == "")
-        $valido = false;
+        array_push($errores,"El nombre no puede estar vacío.");
     
-    if($valido)
-        echo "nombre correcto\n";
-
-
     $regex_email = "/^(([^<>()[\]\\.,;:\s@\']+(\.[^<>()[\]\\.,;:\s@\']+)*)|(\'.+\'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/";
     if(!preg_match($regex_email,$post['email']))
-        $valido = false;
-
-    if($valido)
-        echo "correo correcto\n";
+        array_push($errores,"Formato de correo erróneo.");
 
     // el campo telefono solo acepta un conjunto finito de dígitos
     $regex = "/^\d+$/";
     if(!preg_match($regex,$post['tlf']))
-        $valido = false;
-
-    if($valido)
-        echo "telefono correcto\n";
+        array_push($errores,"Formato de teléfono erróneo.");
 
     if($post['mensaje'] == "")
-        $valido = false;
+        array_push($errores,"El comentario no puede estar vacío.");
 
-    if($valido)
-        echo "mensaje correcto\n";
-
-    return $valido;
+    return $errores;
 }

@@ -65,7 +65,30 @@ switch($_SERVER['REQUEST_METHOD']){
             HTMLfin();            
         }
         else if(isset($_POST['mensaje'])){
-            $valido = validarContacto($_POST);
+            $errores = validarContacto($_POST);
+            
+            if(empty($errores)){
+                $admin = sesionIniciada();
+
+                HTMLinicio($titulo);
+                HTMLcabecera($titulo);
+                HTMLnav($admin);
+                HTMLcontactoExito();
+                HTMLsidebar($admin);
+                HTMLfooter();
+                HTMLfin();    
+            }
+            else{
+                $admin = sesionIniciada();
+
+                HTMLinicio($titulo);
+                HTMLcabecera($titulo);
+                HTMLnav($admin);
+                HTMLcontactoError($errores,$_POST);
+                HTMLsidebar($admin);
+                HTMLfooter();
+                HTMLfin();    
+            }
         }
         else{
             $admin = iniciarSesion($_POST['uname'],$_POST['psw']);

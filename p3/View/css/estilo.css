@@ -505,4 +505,8 @@ p.titulo-lateral{
     padding: 10px 15px;
     border: none;
 }
+
+.text-error{
+    color: #ff1a1a;
+}
 /***********************************************************************/
