@@ -7,6 +7,8 @@ require_once 'View/comunes.php';
 require_once 'View/receta.php';
 require_once 'View/principal.php';
 require_once 'View/contacto.php';
+require_once 'View/listado.php';
+
 require_once 'Controller/usuario.php';
 require_once 'Controller/contacto.php';
 $titulo = "Mi página de recetas";
@@ -32,6 +34,17 @@ switch($_SERVER['REQUEST_METHOD']){
             HTMLcabecera($titulo);
             HTMLnav($admin);
             HTMLcontacto();
+            HTMLsidebar($admin);
+            HTMLfooter();
+            HTMLfin();        
+        }
+        else if(isset($_GET['listado'])){
+            $admin = sesionIniciada();
+
+            HTMLinicio($titulo);
+            HTMLcabecera($titulo);
+            HTMLnav($admin);
+            HTMLlistado();
             HTMLsidebar($admin);
             HTMLfooter();
             HTMLfin();        

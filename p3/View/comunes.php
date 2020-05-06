@@ -33,7 +33,7 @@ echo <<< HTML
     <nav>
         <a href="index.php">Inicio</a>
         $add_receta
-        <a href="#">Listado de recetas</a>
+        <a href="index.php?listado=1">Listado de recetas</a>
         <a href="index.php?contacto=1">Contacto</a>
     </nav>
 HTML;

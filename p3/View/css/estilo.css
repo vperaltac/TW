@@ -18,6 +18,10 @@ body {
     transition: 0.5s;
 }  
 
+a{
+    text-decoration: none;  /*Quita el subrayado*/
+}
+
 
 /***********************************************************************/
 
@@ -510,3 +514,83 @@ p.titulo-lateral{
     color: #ff1a1a;
 }
 /***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+
+.receta-lista  {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.receta-lista h1{
+    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.receta-lista{
+    background-color: #d7e280;
+    color: #222;
+}
+
+.wrap-receta{
+    display:flex;
+    flex-direction: column;
+    
+    color: #222;
+    margin: 10px;
+    border-radius: 2px;
+    border: 2px solid #222;
+}
+
+.lista-recetas {
+    overflow-wrap: break-word;
+
+    flex: 79%;
+    padding: 10px;
+    border: 1px solid rgb(120, 194, 0);
+}
+
+.lista-recetas h2 {
+    font-size: 35px;
+    padding: 2px;
+}
+
+.lista-recetas {
+    overflow-wrap: break-word;
+
+    flex: 59%;
+    padding: 10px;
+    border: 1px solid rgb(120, 194, 0);
+}
+
+.fast-info{
+    background-color: rgb(255, 219, 219);
+    color: blue;
+}
+
+.tiempo-receta{
+    font-weight: bold;
+    margin: 10px;
+    float: right;
+}
+
+.dificultad-receta{
+    font-weight: bold;  
+    margin: 10px;
+    float: left;
+}
+
+.foto-receta-lista{
+    float: right;
+    padding: 12px;
+    max-width:250px;
+    max-height:250px;
+    width: auto;
+    height: auto;
+}
