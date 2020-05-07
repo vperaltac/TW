@@ -11,6 +11,8 @@ require_once 'View/listado.php';
 
 require_once 'Controller/usuario.php';
 require_once 'Controller/contacto.php';
+require_once 'Controller/recetas.php';
+
 $titulo = "Mi página de recetas";
 
 switch($_SERVER['REQUEST_METHOD']){
@@ -22,7 +24,9 @@ switch($_SERVER['REQUEST_METHOD']){
             HTMLinicio($titulo);
             HTMLcabecera($titulo);
             HTMLnav($admin);
-            HTMLreceta();
+
+            $datos = recetas($_GET['receta']);
+            HTMLreceta($datos);
             HTMLsidebar($admin);
             HTMLfooter();
             HTMLfin();        
@@ -48,6 +52,10 @@ switch($_SERVER['REQUEST_METHOD']){
             HTMLsidebar($admin);
             HTMLfooter();
             HTMLfin();        
+        }
+        else if(isset($_GET['test'])){
+            $data = recetas(1);
+            print_r($data);
         }
         else{
             $admin = sesionIniciada();
