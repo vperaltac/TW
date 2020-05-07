@@ -9,3 +9,14 @@ function recetas($id_receta){
 
     return $datos;
 }
+
+function todasRecetas(){
+    $recetas = pedirTodasRecetas();
+
+    foreach($recetas as &$receta){
+        $receta['ingredientes'] = explode("#",$receta['ingredientes']);
+        $receta['preparacion'] = explode("#",$receta['preparacion']);
+    }
+
+    return $recetas;
+}

@@ -12,63 +12,28 @@ require_once 'View/listado.php';
 require_once 'Controller/usuario.php';
 require_once 'Controller/contacto.php';
 require_once 'Controller/recetas.php';
-
-$titulo = "Mi página de recetas";
+require_once 'Controller/render.php';
 
 switch($_SERVER['REQUEST_METHOD']){
     //------------------------------------  GET  ------------------------------------------
     case 'GET':
-        if(isset($_GET['receta'])){
-            $admin = sesionIniciada();
+        switch($_GET['acc']){
+            case 'receta':
+                renderizarReceta();
+            break;
 
-            HTMLinicio($titulo);
-            HTMLcabecera($titulo);
-            HTMLnav($admin);
+            case 'contacto':
+                renderizarContacto();
+            break;
 
-            $datos = recetas($_GET['receta']);
-            HTMLreceta($datos);
-            HTMLsidebar($admin);
-            HTMLfooter();
-            HTMLfin();        
-        }
-        else if(isset($_GET['contacto'])){
-            $admin = sesionIniciada();
+            case 'listado':
+                renderizarListado();
+            break;
 
-            HTMLinicio($titulo);
-            HTMLcabecera($titulo);
-            HTMLnav($admin);
-            HTMLcontacto();
-            HTMLsidebar($admin);
-            HTMLfooter();
-            HTMLfin();        
+            case 'principal':
+                renderizarPrincipal();
+            break;
         }
-        else if(isset($_GET['listado'])){
-            $admin = sesionIniciada();
-
-            HTMLinicio($titulo);
-            HTMLcabecera($titulo);
-            HTMLnav($admin);
-            HTMLlistado();
-            HTMLsidebar($admin);
-            HTMLfooter();
-            HTMLfin();        
-        }
-        else if(isset($_GET['test'])){
-            $data = recetas(1);
-            print_r($data);
-        }
-        else{
-            $admin = sesionIniciada();
-
-            HTMLinicio($titulo);
-            HTMLcabecera($titulo);
-            HTMLnav($admin);
-            HTMLprincipal();
-            HTMLsidebar($admin);
-            HTMLfooter();
-            HTMLfin();        
-        }
-        
     break;
 
     //------------------------------------  POST  ------------------------------------------
@@ -77,13 +42,7 @@ switch($_SERVER['REQUEST_METHOD']){
 
         if(isset($_POST['logout'])){
             cerrarSesion();
-            HTMLinicio($titulo);
-            HTMLcabecera($titulo);
-            HTMLnav(0);
-            HTMLreceta();
-            HTMLsidebar(0);
-            HTMLfooter();
-            HTMLfin();            
+            renderizarPrincipal();
         }
         else if(isset($_POST['mensaje'])){
             $errores = validarContacto($_POST);
@@ -97,7 +56,7 @@ switch($_SERVER['REQUEST_METHOD']){
                 HTMLcontactoExito();
                 HTMLsidebar($admin);
                 HTMLfooter();
-                HTMLfin();    
+                HTMLfin();
             }
             else{
                 $admin = sesionIniciada();
@@ -108,19 +67,12 @@ switch($_SERVER['REQUEST_METHOD']){
                 HTMLcontactoError($errores,$_POST);
                 HTMLsidebar($admin);
                 HTMLfooter();
-                HTMLfin();    
+                HTMLfin();
             }
         }
         else{
             $admin = iniciarSesion($_POST['uname'],$_POST['psw']);
-
-            HTMLinicio($titulo);
-            HTMLcabecera($titulo);
-            HTMLnav($admin);
-            HTMLreceta();
-            HTMLsidebar($admin);
-            HTMLfooter();
-            HTMLfin();            
+            renderizarPrincipal();
         }
     break;
 }

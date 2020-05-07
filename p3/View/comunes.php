@@ -1,5 +1,5 @@
 <?php
-function HTMLinicio($titulo){
+function HTMLinicio(){
 echo <<< HTML
     <!DOCTYPE html>
     <html lang="es-ES">
@@ -8,14 +8,14 @@ echo <<< HTML
         <link rel="stylesheet" type="text/css" href="View/css/estilo.css">
         <link rel="icon" href="View/img/burger-top.png" type="imgs">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>$titulo</title>
+        <title>Mi Página de recetas</title>
     </head>
 
     <body>
 HTML;
 }
 
-function HTMLcabecera($titulo){
+function HTMLcabecera(){
 echo <<< HTML
     <header class="cabecera">
         <img class="logo" src='View/img/burger-top.png' alt='logo'>
@@ -31,10 +31,10 @@ function HTMLnav($conectado){
 
 echo <<< HTML
     <nav>
-        <a href="index.php">Inicio</a>
+        <a href="index.php?acc=principal">Inicio</a>
         $add_receta
-        <a href="index.php?listado=1">Listado de recetas</a>
-        <a href="index.php?contacto=1">Contacto</a>
+        <a href="index.php?acc=listado">Listado de recetas</a>
+        <a href="index.php?acc=contacto">Contacto</a>
     </nav>
 HTML;
 }

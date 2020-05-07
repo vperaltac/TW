@@ -49,7 +49,7 @@ function HTMLcontactoExito(){
                 <h1>Comentario enviado.</h1>
         </div>
 
-        <form class="formulario" action="index.php">
+        <form class="formulario" action="index.php?acc=principal">
             <input class="boton" type="submit" name="volver" value="Volver a inicio" />
         </form>
         </section>
