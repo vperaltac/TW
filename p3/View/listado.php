@@ -8,7 +8,10 @@ HTML;
     foreach($recetas as &$receta){
         echo <<< HTML
             <div class="wrap-receta">
-                <a href="index.php?acc=receta&r=1">
+HTML;
+
+        echo '<a href="index.php?acc=receta&r='.$receta['id_receta'].'">';
+        echo <<< HTML
                     <div class="receta-lista">
                         <img class="foto-receta-lista" src='View/img/receta.jpg' alt='foto-receta'>
 
@@ -30,7 +33,8 @@ HTML;
                     </div>    
                 </a>
             </div>
-        </section>
 HTML;
     }
+
+    echo "</section>";
 }
