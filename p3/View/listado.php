@@ -13,7 +13,9 @@ HTML;
         echo '<a href="index.php?acc=receta&r='.$receta['id_receta'].'">';
         echo <<< HTML
                     <div class="receta-lista">
-                        <img class="foto-receta-lista" src='View/img/receta.jpg' alt='foto-receta'>
+HTML;
+        echo '<img class="foto-receta-lista" src="data:image/jpg;base64,'.base64_encode( $receta['imagen'] ).'">';
+        echo <<< HTML
 
                         <section id="info-lista-receta">
                             <h1>$receta[titulo]</h1>

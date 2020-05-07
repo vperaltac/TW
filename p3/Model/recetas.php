@@ -27,3 +27,13 @@ function pedirTodasRecetas(){
 
     return $recetas;
 }
+
+
+function nuevaReceta($titulo,$autor,$categoria,$descripcion,$ingredientes,$preparacion,$tiempo,$dificultad,$imagen){
+    $db = Database::getInstancia();
+    $mysqli = $db->getConexion();
+
+    $sentencia = $mysqli->prepare("INSERT INTO recetas (titulo,autor,categoria,descripcion,ingredientes,preparacion,tiempo,dificultad,imagen) VALUES(?,?,?,?,?,?,?,?,?)");
+    $sentencia->bind_param("sssssssss",$titulo,$autor,$categoria,$descripcion,$ingredientes,$preparacion,$tiempo,$dificultad,$imagen);
+    $sentencia->execute();
+}

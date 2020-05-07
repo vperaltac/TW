@@ -14,10 +14,18 @@ require_once 'Controller/contacto.php';
 require_once 'Controller/recetas.php';
 require_once 'Controller/render.php';
 
+// Recibe la URI de htaccess en formato "limpio"
+$uri = $_SERVER['REQUEST_URI'];
+
+if(!isset($_GET['acc']))
+    $dest = "principal";
+else
+    $dest = $_GET['acc'];
+
 switch($_SERVER['REQUEST_METHOD']){
     //------------------------------------  GET  ------------------------------------------
     case 'GET':
-        switch($_GET['acc']){
+        switch($dest){
             case 'receta':
                 renderizarReceta();
             break;
@@ -33,11 +41,16 @@ switch($_SERVER['REQUEST_METHOD']){
             case 'principal':
                 renderizarPrincipal();
             break;
+
+            case 'nueva_receta':
+                renderizarNuevaReceta();
+            break;
         }
     break;
 
     //------------------------------------  POST  ------------------------------------------
     case 'POST':
+        print_r($_FILES);
         print_r($_POST);
 
         if(isset($_POST['logout'])){
@@ -69,6 +82,9 @@ switch($_SERVER['REQUEST_METHOD']){
                 HTMLfooter();
                 HTMLfin();
             }
+        }
+        else if(isset($_POST['descripcion'])){
+            subirNuevaReceta();
         }
         else{
             $admin = iniciarSesion($_POST['uname'],$_POST['psw']);

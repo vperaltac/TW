@@ -596,3 +596,66 @@ p.titulo-lateral{
     width: auto;
     height: auto;
 }
+
+/**************************************************************************/
+/********************* Añadir receta***************************************/
+.tabla {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  margin-bottom: 3%;
+}
+
+.tabla th, .tabla td {
+  text-align: left;
+  padding: 12px;
+}
+
+.tabla tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla tr.header, .tabla tr:hover {
+  background-color: #f1f1f1;
+}
+
+td a {
+  text-decoration: none;
+  color: #222;
+}
+
+.addEvento {
+  text-align: center;
+}
+
+.imgs {
+  display: flex;
+}
+
+.img1, .img2 {
+  flex: 45%;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+.btn-eliminar {
+  background-color: #ff1a1a;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.modEtiquetas{
+  display: flex;
+}
+
+.izq, .der {
+  flex: 50%;
+  text-align: left;
+}

@@ -20,3 +20,20 @@ function todasRecetas(){
 
     return $recetas;
 }
+
+function subirNuevaReceta(){
+    $titulo = $_POST['titulo'];
+    $autor  = $_POST['autor'];
+    $categoria = $_POST['categoria'];
+    $descripcion = $_POST['descripcion'];
+    $ingredientes = $_POST['ingredientes'];
+    $preparacion = $_POST['preparacion'];
+    $tiempo = "30 minutos";
+    $dificultad ="Difícil";
+
+    $ruta = "View/img/";
+    $imagen = file_get_contents($ruta . $_POST['img']);
+    echo $imagen;
+
+    nuevaReceta($titulo,$autor,$categoria,$descripcion,$ingredientes,$preparacion,$tiempo,$dificultad,$imagen);
+}

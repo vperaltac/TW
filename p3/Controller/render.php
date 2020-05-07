@@ -4,6 +4,7 @@ require_once 'View/receta.php';
 require_once 'View/principal.php';
 require_once 'View/contacto.php';
 require_once 'View/listado.php';
+require_once 'View/nueva_receta.php';
 require_once 'Controller/usuario.php';
 require_once 'Controller/contacto.php';
 require_once 'Controller/recetas.php';
@@ -53,6 +54,18 @@ function renderizarPrincipal(){
     HTMLcabecera();
     HTMLnav($admin);
     HTMLprincipal();
+    HTMLsidebar($admin);
+    HTMLfooter();
+    HTMLfin();
+}
+
+function renderizarNuevaReceta(){
+    $admin = sesionIniciada();
+
+    HTMLinicio();
+    HTMLcabecera();
+    HTMLnav($admin);
+    HTMLnueva_receta();
     HTMLsidebar($admin);
     HTMLfooter();
     HTMLfin();

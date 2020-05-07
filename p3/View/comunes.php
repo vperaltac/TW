@@ -27,7 +27,7 @@ HTML;
 function HTMLnav($conectado){
     $add_receta = "";
     if($conectado == 1)
-        $add_receta = "<a href='#'>Añadir nueva receta</a>";
+        $add_receta = "<a href='index.php?acc=nueva_receta'>Añadir nueva receta</a>";
 
 echo <<< HTML
     <nav>
